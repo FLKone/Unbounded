@@ -22,7 +22,7 @@
 	<thead>
 		<tr class="top">
 			<th class="right first">Stats</th>
-			<th class="right">Reagents > Craft [value]</th>
+			<th class="right">Reagents > Craft</th>
 		</tr>
 	</thead>
 	<tbody>

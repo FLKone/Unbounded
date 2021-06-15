@@ -26,7 +26,7 @@
 				<Item bind:item={databaseByID[item]}/>
 			</td>
 			<td class="right">
-				{$number(databaseByID[item].buyPrice)} Golds
+				<span class="sellprice">{$number(databaseByID[item].buyPrice)}</span>
 			</td>
 		</tr>
 		{/each}
