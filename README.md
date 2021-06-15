@@ -1,3 +1,3 @@
 ## CraftBound Data
 
-Live version : https://flk.io/cb-data
+Live version : https://unbounded.flk.io

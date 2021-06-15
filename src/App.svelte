@@ -673,8 +673,8 @@
   </footbar>
 
   <footer>
-    <span>Open Source & <a target="_blank" href="https://github.com/FLKone/cb-data">Hosted</a> on <a target="_blank" href="https://github.com">Github</a></span>&nbsp;<img src="./img/github-mark.svg" alt="Github"/>&nbsp;|&nbsp;&copy;<span>2020</span>&nbsp;<span><a
-          href="https://github.com/FLKone/cb-data/releases">v0.2.1</a></span>
+    <span>Open Source & <a target="_blank" href="https://github.com/FLKone/Unbounded">Hosted</a> on <a target="_blank" href="https://github.com">Github</a></span>&nbsp;<img src="./img/github-mark.svg" alt="Github"/>&nbsp;|&nbsp;&copy;<span>2020</span>&nbsp;<span><a
+          href="https://github.com/FLKone/Unbounded/releases">v0.2.2</a></span>
   </footer>
 </main>
 
@@ -853,7 +853,7 @@
 
     .sellprice {
 
-      background:right 1px no-repeat url('../img/craftbound/gold.png');
+      background:right 1px no-repeat url('/img/craftbound/gold.png');
       background-size: 20px 20px;
       padding-right: 22px;
     }

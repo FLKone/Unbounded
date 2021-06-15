@@ -41,7 +41,7 @@
                     {/if}
                 {/each}
             </ul>
-            <span class="required">Combat Lv.{item.gear.minimumLevel}</span>
+            <span class="required">Lv.{item.gear.minimumLevel}</span>
             <!--
             {item.gear.gearType.toLowerCase()}-->
 
@@ -54,7 +54,7 @@
             {#if item.consumable.manaAmount} <li> {$number(item.consumable.manaAmount)} MP {#if item.consumable.duration} over {item.consumable.duration}s{/if}</li>{/if}
             {#if item.consumable.cooldownTime} <li>Cooldown {item.consumable.cooldownTime}s </li> {/if}
             </ul>
-            <span class="required">Combat Lv.{item.consumable.levelRequirement}</span>
+            <span class="required">Lv.{item.consumable.levelRequirement}</span>
         {:else}
             {#if item.name.includes("Recipe")}
                 <span class="type recipe"></span>
@@ -133,47 +133,47 @@
         right: 10px;
     }
     item .type.gearmainhand {
-        background:url("../img/craftbound/hand-weapon.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/hand-weapon.png") right top / 25px 25px no-repeat;
     }
     item .type.geargloves {
-        background:url("../img/craftbound/gloves.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/gloves.png") right top / 25px 25px no-repeat;
     }
     item .type.gearhead {
-        background:url("../img/craftbound/head.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/head.png") right top / 25px 25px no-repeat;
     }
     item .type.gearchest {
-        background:url("../img/craftbound/armor.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/armor.png") right top / 25px 25px no-repeat;
     }
     item .type.gearfinger {
-        background:url("../img/craftbound/ring.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/ring.png") right top / 25px 25px no-repeat;
     }
     item .type.gearfeet {
-        background:url("../img/craftbound/placeholder.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/placeholder.png") right top / 25px 25px no-repeat;
     }
     item .type.gearbelt  {
-        background:url("../img/craftbound/placeholder.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/placeholder.png") right top / 25px 25px no-repeat;
     }
 
     item .type.healthfood, item .type.manafood, item .type.healthmanafood {
-        background:url("../img/craftbound/food.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/food.png") right top / 25px 25px no-repeat;
     }
 
     item .type.recipe  {
-        background:url("../img/craftbound/recipe.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/recipe.png") right top / 25px 25px no-repeat;
     }
     item .type.mining  {
-        background:url("../img/craftbound/mining.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/mining.png") right top / 25px 25px no-repeat;
     }
 
     item .type.goldencookie  {
-        background:url("../img/craftbound/goldencookie.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/goldencookie.png") right top / 25px 25px no-repeat;
     }
 
     item .type.healthpotion   {
-        background:url("../img/craftbound/health-potion.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/health-potion.png") right top / 25px 25px no-repeat;
     }
     item .type.manapotion  {
-        background:url("../img/craftbound/mana-potion.png") right top / 25px 25px no-repeat;
+        background:url("/img/craftbound/mana-potion.png") right top / 25px 25px no-repeat;
     }
 
 
