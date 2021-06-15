@@ -129,7 +129,7 @@
         width: 30px;
         height: 30px;
         position: absolute;
-        top: 12px;
+        top: 8px;
         right: 10px;
     }
     item .type.gearmainhand {
