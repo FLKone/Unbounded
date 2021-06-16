@@ -2,6 +2,6 @@ body {
     background-color: white;
     color: #333;
 }
-tbody tr:hover {
+tbody tr:hover, tbody tr:active {
     background-color: #fffadd;
 }
