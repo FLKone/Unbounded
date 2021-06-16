@@ -102,7 +102,7 @@
                     <br>-->
                     <span class="name">{databaseByID[profit.itemIdentifier].name}</span><br>(Lv.{profit.requiredLevel})
                     <span class="farming-breakdown"><br>[{databaseByID[profit.itemIdentifier].sellPrice}g] / {profit.duration}s</span>
-                    <hr>
+
                     <ul class="reagents">
                     {#each profit.reagents as reagent}
                     <li>
@@ -194,7 +194,7 @@
                 <br>-->
                 <span class="name">{databaseByID[profit.itemIdentifier].name}</span><br>(Lv.{profit.requiredLevel})
                 <span class="farming-breakdown"><br>[{databaseByID[profit.itemIdentifier].sellPrice}g] / {profit.duration}s</span>
-                <hr>
+
                 <ul class="reagents">
                 {#each profit.reagents as reagent}
                 <li>
@@ -267,16 +267,21 @@
 
 <style>
     h5 {
-    margin: 0 0 5px 0;
-    text-align: right;
-    font-size: 0.7em;
-    color: gray;
+        margin: 0 0 5px 0;
+        text-align: right;
+        font-size: 0.7em;
+        color: gray;
     }
 
     .farming-breakdown {
         color: grey;
         font-size: 0.8em;
         font-weight: normal;
+    }
+    .reagents {
+        border-top: 1px dashed #d0d0d0;
+        margin-top: 8px;
+        padding-top: 10px;
     }
 
     .reagents li {
@@ -298,12 +303,12 @@
     span.fishing {
         background-color:#5b93db;
         color:white;
-    }    
+    }
 
     span.farming {
         background-color:green;
         color:white;
-    }  
+    }
 
     span.mining {
         background-color:chocolate;
@@ -320,10 +325,6 @@
         color:white;
         background-color:#e51515;
     }
-
-    tr.spacer, tr.spacer td {
-        border:none;
-    }  
 
     .name {
         font-weight: bold;

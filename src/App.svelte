@@ -812,7 +812,9 @@
   <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
   <style>
-
+    body {
+      background-color:#fafafa;
+    }
     a {
       text-decoration: none;
     }
@@ -829,7 +831,7 @@
     td.title {
       text-transform: uppercase;
       font-weight: bold;
-      border-bottom: 1px solid #d0d0d0 !important;
+      border-bottom: 1px solid #d0d0d0;
     }
 
     tr td, tr th {
@@ -838,7 +840,7 @@
     }
 
     tr td:last-child, tr th:last-child {
-      border: none !important;
+      border-right: none !important;
     }
 
     h4 {
