@@ -1,0 +1,23 @@
+body {
+    background-color: #151414 !important;
+    color:white;
+}
+tbody tr:hover {
+    background-color: #241f1f !important;
+}
+.elite, .hidden {
+    color: black !important;
+}
+
+a {
+    color: #a6a6a6 !important;
+}
+
+item {
+    border: 1px solid #131313 !important;
+    background-color: #131313 !important;
+}
+
+tr td, tr th {
+    border-right: 1px solid #686868 !important;
+}
