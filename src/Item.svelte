@@ -79,10 +79,10 @@
 <style>
     item {
         display: block;
-        border: 1px solid black;
+        border: 1px solid #1e1e1e;
         padding:4px;
         margin:5px 0;
-        background-color: #3b3535;
+        background-color: #1e1e1e;
         border-radius: 10px;
         color: white;
     }

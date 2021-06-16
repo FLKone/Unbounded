@@ -652,7 +652,7 @@
 
 
   <topper>
-    <h4><a href="javascript:void(0)" on:click={scrollTop}>&#9652; TOP &#9652;</a></h4>
+    <a href="javascript:void(0)" on:click={scrollTop}>&#9652; TOP &#9652;</a>
   </topper>
 
   <footbar>
@@ -674,7 +674,7 @@
 
   <footer>
     <span>Open Source & <a target="_blank" href="https://github.com/FLKone/Unbounded">Hosted</a> on <a target="_blank" href="https://github.com">Github</a></span>&nbsp;<img src="./img/github-mark.svg" alt="Github"/>&nbsp;|&nbsp;&copy;<span>2020</span>&nbsp;<span><a
-          href="https://github.com/FLKone/Unbounded/releases">v0.3</a></span>
+          href="https://github.com/FLKone/Unbounded/releases">v0.3.1</a></span>
   </footer>
 </main>
 
@@ -762,12 +762,13 @@
     margin: auto;
     font-size: 1.9em;
     font-variant: small-caps;
+    text-align: right;
   }
 
   h1.page-title {
     text-transform: uppercase;
     font-size: 20px;
-    border-right: 5px solid mediumpurple;
+    border-bottom: 5px solid mediumpurple;
     display: inline;
     padding-right: 10px;
   }
@@ -808,8 +809,10 @@
 
 <svelte:head>
   <title>{title}</title>
-
+  <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
   <style>
+
     a {
       text-decoration: none;
     }
@@ -835,19 +838,16 @@
     }
 
     tr td:last-child, tr th:last-child {
-      border: none;
+      border: none !important;
     }
 
     h4 {
       padding: 5px 10px;
       font-variant: small-caps;
-      border-top: 1px solid mediumpurple;
-      border-bottom: 1px solid mediumpurple;
+      border-bottom: 2px solid mediumpurple;
     }
 
-    tbody tr:hover {
-      background-color: #fffdf0;
-    }
+
     tbody tr.spacer:hover {
       background-color: transparent;
     }
@@ -888,6 +888,7 @@
     .elite, .hidden {
       background: rgb(236, 222, 14);
       font-weight: bold;
+      padding:0 5px;
     }
 
     ul {

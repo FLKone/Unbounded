@@ -61,6 +61,9 @@
     </tr>
     </thead>
     <tbody>
+        <tr class="spacer">
+            <td colspan="2"></td>
+        </tr>
         <tr>
             <td class="right">
                 1
@@ -68,6 +71,9 @@
             <td class="right">
                 N/A
             </td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2"></td>
         </tr>
         {#each data.xp as xp}
             {#if xp.level <= 50}

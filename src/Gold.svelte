@@ -335,7 +335,7 @@
 
     .warning {
         color: #ca3232;
-font-style: italic;
+        font-style: italic;
     }
 
     h3 {
@@ -343,6 +343,8 @@ font-style: italic;
         text-align: center;
         background-color: lightgoldenrodyellow;
         padding: 10px;
-font-size: 1em;
+        font-size: 1em;
+        color: black;
+        margin-top: 30px;
     }
 </style>
