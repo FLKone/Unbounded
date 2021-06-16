@@ -21,43 +21,46 @@
 <table>
 	<thead>
 	<tr class="top">
-		<th class="right first">Stats</th>
-		<th class="right">Reagents > Craft</th>
+		<th class="left first">Stats</th>
+		<th class="left">Reagents > Craft</th>
 	</tr>
 </thead>
 <tbody>
 	{#each data.cookingRecipes as recipe}
-		<tr>
-			<td colspan="2" class="title">
-                {databaseByID[recipe.itemIdentifier].name} Lv.{recipe.requiredLevel}
+		{#if !recipe.hidden || recipe.itemIdentifierToUnlock}
 
-                {#if recipe.hidden}
-                    <br><span class="hidden">
-                    {#if recipe.itemIdentifierToUnlock}
-                        Learn with: {databaseByID[recipe.itemIdentifierToUnlock].name} 
-                    {:else}
-                        Locked
-                    {/if}
-                    </span>
-                {/if}
-			</td>
-		</tr>                
-		<tr>
-			<td class="right">  
-				{recipe.duration}s
-				<br>{$number(recipe.xp)} XP
-				<br><span class="droprate">{$number(Math.round(recipe.xp * 60 / recipe.duration))} XP/min</span>					
-			</td>
-			<td class="left">
-				<ul>         
-					{#each recipe.reagents as reagent}
-						<li>{reagent.quantity}x {databaseByID[reagent.itemIdentifier].name}</li>
-					{/each}
-				</ul>
-				<hr/>
-                <Item bind:item={databaseByID[recipe.itemIdentifier]}/>
-			</td>
-		</tr>	
+			<tr class="title">
+				<td colspan="2" class="title">
+					{databaseByID[recipe.itemIdentifier].name} Lv.{recipe.requiredLevel}
+
+					{#if recipe.hidden}
+						<br><span class="hidden">
+						{#if recipe.itemIdentifierToUnlock}
+							Learn with: {databaseByID[recipe.itemIdentifierToUnlock].name}
+						{:else}
+							Locked
+						{/if}
+						</span>
+					{/if}
+				</td>
+			</tr>
+			<tr>
+				<td class="left">
+					<span class="stats">{recipe.duration}</span>s
+					<br><span class="stats">{$number(recipe.xp)}</span> XP
+					<br><span class="droprate">{$number(Math.round(recipe.xp * 60 / recipe.duration))} XP/min</span>
+				</td>
+				<td class="left">
+					<ul>
+						{#each recipe.reagents as reagent}
+							<li>{reagent.quantity}x {databaseByID[reagent.itemIdentifier].name}</li>
+						{/each}
+					</ul>
+					<hr/>
+					<Item bind:item={databaseByID[recipe.itemIdentifier]}/>
+				</td>
+			</tr>
+		{/if}
 	{/each}
 </tbody>
 </table>

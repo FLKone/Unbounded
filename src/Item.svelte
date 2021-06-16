@@ -16,7 +16,7 @@
 
 
             <ul>
-                <li>{#each item.gear.stats as stat}{#if stat.statKey === "minDamage"}{$number(stat.statValue)}{/if}{/each}{#each item.gear.stats as stat}{#if stat.statKey === "maxDamage"}-{$number(stat.statValue)} dmg{/if}{/each}</li>
+                <li>{#each item.gear.stats as stat}{#if stat.statKey === "minDamage"}{$number(stat.statValue)}{/if}{/each}{#each item.gear.stats as stat}{#if stat.statKey === "maxDamage"}-{$number(stat.statValue)} Dmg{/if}{/each}</li>
 
                 {#each item.gear.stats as stat}
                     {#if stat.statKey !== "minDamage" && stat.statKey !== "maxDamage"}

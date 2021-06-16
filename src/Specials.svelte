@@ -15,14 +15,18 @@
 </thead>
 <tbody>
 	{#each data.specialUsables as special}
+        <tr class="title"><td colspan="2" class="title">{databaseByID[special.usableItemIdentifier].name}</td></tr>
 		<tr>
-			<td>
+			<td class="left">
+                <!--<Item bind:item={databaseByID[special.usableItemIdentifier]}/>-->
+                1x {databaseByID[special.usableItemIdentifier].name}
+                <!--
                 <ul>
                     <li class="gear">
                         <span class="name">{databaseByID[special.usableItemIdentifier].name}</span>
                         <span class="description">{databaseByID[special.usableItemIdentifier].itemDescription}</span> <span class="rarity">({databaseByID[special.usableItemIdentifier].rarity})</span>
                     </li>
-                </ul>
+                </ul>-->
             </td>            
             <td class="left">
                 {#if special.requiredItems}
@@ -55,6 +59,7 @@
             {/if}	
             </td>
         </tr>
+
 	{/each}
 </tbody>
 </table>

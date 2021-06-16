@@ -21,20 +21,20 @@
 <table>
 	<thead>
 	<tr class="top">
-		<th class="right first">Stats</th>
-		<th class="right">Loots <br> (rate)</th>
+		<th class="left first">Stats</th>
+		<th class="left">Loots <br> (rate)</th>
 	</tr>
 </thead>
 <tbody>
 	{#each data.enemies as enemy}
-		<tr>
-			<td colspan="2" class="title">{enemy.name} (Lv.{enemy.level})<br/>{#if enemy.isElite}<span class="elite">Elite</span>{/if}</td>
+		<tr class="title">
+			<td colspan="2" class="title">{#if enemy.name}{enemy.name}{:else}???{/if} (Lv.{enemy.level})<br/>{#if enemy.isElite}<span class="elite">Elite</span>{/if}</td>
 		</tr>
 		<tr>
-			<td class="right">
-				{$number(enemy.hp)} HP
-				<br/> {$number(enemy.minAttackDamage)}-{$number(enemy.maxAttackDamage)} dmg
-				<br/> {$number(enemy.XP)} XP
+			<td class="left">
+				<span class="stats">{$number(enemy.hp)}</span> HP
+				<br/> <span class="stats">{$number(enemy.minAttackDamage)}-{$number(enemy.maxAttackDamage)}</span> Dmg
+				<br/> <span class="stats">{$number(enemy.XP)}</span> XP
 			</td>
 			<td class="left">
 				{#if enemy.drops.length}

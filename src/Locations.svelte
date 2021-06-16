@@ -20,17 +20,18 @@
 <table>
 	<thead>
 	<tr class="top">
-		<th class="right first">Stats</th>
-		<th class="right">Loots <br> (rate) XP </th>
+		<th class="left first">Stats</th>
+		<th class="left">Loots <br> (rate) XP </th>
 	</tr>
 </thead>
 <tbody>
 	{#each data.locations as location}
-		<tr>
-            <td colspan="2" class="title">
-                {location.name} (Lv.{location.level})
-                <br/>
-                {#if location.hidden}
+		{#if !location.hidden || location.itemIdentifierToUnlock}
+			<tr class="title">
+				<td colspan="2" class="title">
+					{location.name} (Lv.{location.level})
+					<br/>
+					{#if location.hidden}
 					<span class="hidden">
 						{#if location.itemIdentifierToUnlock}
 							Reveal with: {databaseByID[location.itemIdentifierToUnlock].name}
@@ -38,33 +39,36 @@
 							Locked
 						{/if}
 					</span>
-                {/if}
-            </td>		
-		</tr>
-		<tr>
-            <td class="right">
-				{location.fishingMinCatchTime}-{location.fishingMaxCatchTime}s <br>{location.fishingJunkChance * 100}% Junk
-			</td>
-            <td class="left">
-                {#if data.fishingDrops}
-                    <ul>
-                        {#each data.fishingDrops as drop}
-                            {#if drop.locationIdentifier == location.identifier}
-								{#if drop.isGold}
-									<ul>
-										<li>
-											{drop.minQuantity}-{drop.maxQuantity} golds <span class="droprate">({drop.dropChance * 100}%)</span>
-										</li>
-									</ul>
-								{:else}
-									<Item bind:item={databaseByID[drop.itemIdentifier]} bind:dropXP={drop.xp} bind:dropChance={drop.dropChance}/>
+					{/if}
+				</td>
+			</tr>
+			<tr>
+				<td class="left">
+					<span class="stats">{location.fishingMinCatchTime}-{location.fishingMaxCatchTime}</span>s
+					<br><span class="stats">{location.fishingJunkChance * 100}%</span> Junk
+				</td>
+				<td class="left">
+					{#if data.fishingDrops}
+						<ul>
+							{#each data.fishingDrops as drop}
+								{#if drop.locationIdentifier == location.identifier}
+									{#if drop.isGold}
+										<ul>
+											<li>
+												{drop.minQuantity}-{drop.maxQuantity} golds <span class="droprate">({drop.dropChance * 100}%)</span>
+											</li>
+										</ul>
+									{:else}
+										<Item bind:item={databaseByID[drop.itemIdentifier]} bind:dropXP={drop.xp} bind:dropChance={drop.dropChance}/>
+									{/if}
 								{/if}
-                            {/if}
-                        {/each}
-                    </ul>
-                {/if}
-            </td>
-		</tr>	
+							{/each}
+						</ul>
+					{/if}
+				</td>
+			</tr>
+		{/if}
+
 	{/each}
 </tbody>
 </table>

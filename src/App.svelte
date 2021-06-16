@@ -600,24 +600,24 @@
   <menu>
     <h3>Tasks</h3>
     <ul class="menu">
-      <li><a href="./#/combat">Combat</a> </li>
-      <li><a href="./#/fishing">Fishing</a></li>
-      <li><a href="./#/cooking">Cooking</a></li>
-      <li><a href="./#/mining">Mining</a></li>
+      <li><a href="./#/combat">Combat</a></li> |
+      <li><a href="./#/fishing">Fishing</a></li> |
+      <li><a href="./#/cooking">Cooking</a></li> |
+      <li><a href="./#/mining">Mining</a></li> |
       <li><a href="./#/blacksmithing">Blacksmithing</a></li>
     </ul>
     <h3>Misc.</h3>
     <ul class="menu">
-      <li><a href="./#/vendors">Vendors</a></li>
-      <li><a href="./#/specials">Specials Items</a></li>
-      <li><a href="./#/character">Character Stats</a></li>
+      <li><a href="./#/vendors">Vendors</a></li> |
+      <li><a href="./#/specials">Specials Items</a></li> |
+      <li><a href="./#/character">Character Stats</a></li> |
 
       <!--<li><a href="./#/database">Database (Beta)</a></li>-->
     </ul>
     <h3>Guides</h3>
     <ul class="menu">
-      <li><a href="./#/gold-farming">Gold Farm (	&beta; )</a></li>
-      <li><a href="./#/xp-farming">XP Farm (	&beta; )</a></li>
+      <li><a href="./#/gold-farming">Gold Farm (	&beta; )</a></li> |
+      <li><a href="./#/xp-farming">XP Farm (	&beta; )</a></li> |
       <li><a href="./#/weapons-dps">Weapons (	&beta; )</a></li>
       <!--<li><a href="./#/database">Database (Beta)</a></li>-->
     </ul>
@@ -652,7 +652,7 @@
 
 
   <topper>
-    <a href="javascript:void(0)" on:click={scrollTop}>&#9652; TOP &#9652;</a>
+    <h4><a href="javascript:void(0)" on:click={scrollTop}>&#9652; TOP &#9652;</a></h4>
   </topper>
 
   <footbar>
@@ -674,7 +674,7 @@
 
   <footer>
     <span>Open Source & <a target="_blank" href="https://github.com/FLKone/Unbounded">Hosted</a> on <a target="_blank" href="https://github.com">Github</a></span>&nbsp;<img src="./img/github-mark.svg" alt="Github"/>&nbsp;|&nbsp;&copy;<span>2020</span>&nbsp;<span><a
-          href="https://github.com/FLKone/Unbounded/releases">v0.2.2</a></span>
+          href="https://github.com/FLKone/Unbounded/releases">v0.3</a></span>
   </footer>
 </main>
 
@@ -689,7 +689,9 @@
   topper a {
     color: black;
     text-decoration: none;
+    display: block;
   }
+
   .community img {
     height:50px;
   }
@@ -759,10 +761,15 @@
   h1 {
     margin: auto;
     font-size: 1.9em;
+    font-variant: small-caps;
   }
 
   h1.page-title {
     text-transform: uppercase;
+    font-size: 20px;
+    border-right: 5px solid mediumpurple;
+    display: inline;
+    padding-right: 10px;
   }
 
   h2 {
@@ -770,16 +777,18 @@
     font-size: 0.9em;
     color: mediumpurple;
     text-align: right;
+    font-variant: small-caps;
   }
+
   h3 {
     margin:0;
     font-size: 0.8em;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     clear:left;
   }
 
   menu {
-    border: 1px solid black;
+    border-left: 5px solid mediumpurple;
     border-radius: 10px;
     padding: 10px;
   }
@@ -791,7 +800,7 @@
   }
 
   .menu li {
-    margin: 0 5px;
+    margin: 0;
     display: inline-block;
   }
 
@@ -801,20 +810,58 @@
   <title>{title}</title>
 
   <style>
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline !important;
+    }
+
     table {
       border-collapse: collapse;
       width: 100%;
     }
 
-    .title {
+    td.title {
       text-transform: uppercase;
       font-weight: bold;
+      border-bottom: 1px solid #d0d0d0 !important;
     }
 
     tr td, tr th {
-      padding: 5px;
-      border: 1px solid black;
+      padding: 10px;
+      border-right: 1px solid #d0d0d0;
     }
+
+    tr td:last-child, tr th:last-child {
+      border: none;
+    }
+
+    h4 {
+      padding: 5px 10px;
+      font-variant: small-caps;
+      border-top: 1px solid mediumpurple;
+      border-bottom: 1px solid mediumpurple;
+    }
+
+    tbody tr:hover {
+      background-color: #fffdf0;
+    }
+    tbody tr.spacer:hover {
+      background-color: transparent;
+    }
+    tr.title:hover {
+      background-color: transparent;
+    }
+
+    tr.spacer, tr.spacer td {
+      border: none;
+      height: 10px;
+      padding: 0;
+    }
+
+
 
     .top .first {
       width: 120px;
@@ -823,6 +870,9 @@
       width: 50%;
     }
 
+    tr.top th {
+      font-variant: small-caps;
+    }
     .top .third {
       width: 40%;
 
@@ -856,6 +906,10 @@
       background:right 1px no-repeat url('/img/craftbound/gold.png');
       background-size: 20px 20px;
       padding-right: 22px;
+    }
+
+    span.stats {
+      font-weight: bold;
     }
 
   </style>
