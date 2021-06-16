@@ -852,7 +852,7 @@
       background-color: transparent;
     }
     tr.title:hover {
-      background-color: transparent;
+      background-color: transparent !important;
     }
 
     tr.spacer, tr.spacer td {
