@@ -610,7 +610,7 @@
     <ul class="menu">
       <li><a href="./#/vendors">Vendors</a></li> |
       <li><a href="./#/specials">Specials Items</a></li> |
-      <li><a href="./#/character">Character Stats</a></li> |
+      <li><a href="./#/character">Character Stats</a></li>
 
       <!--<li><a href="./#/database">Database (Beta)</a></li>-->
     </ul>
