@@ -83,13 +83,15 @@ While I work on adding the Weapons DPS Cheat Sheet right here, you can use this 
 
 
 <style>
-h3 {
-    border-radius: 10px;
-    text-align: center;
-    background-color: lightgoldenrodyellow;
-    padding: 10px;
-    font-size: 1em;
-}
+    h3 {
+        border-radius: 10px;
+        text-align: center;
+        background-color: lightgoldenrodyellow;
+        padding: 10px;
+        font-size: 1em;
+        color: black;
+        margin-top: 30px;
+    }
 a {
     font-weight: bold;
 }
