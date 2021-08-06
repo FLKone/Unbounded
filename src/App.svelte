@@ -7,7 +7,7 @@
     window.scroll({ top: 0, left: 0, behavior: 'smooth'});
   }
 
-  import * as data from './get-release-v2.json';
+  import * as data from './get-release-v6.json';
   let newGear = [];
   let newConsumable = [];
   let database = data.items;
@@ -60,6 +60,7 @@
   import XP from './XP.svelte';
   import Character from './Character.svelte';
   import Weapons from './Weapons.svelte';
+  import SkillGear from './SkillGear.svelte';
 
   $: title = "Unbounded - Craftbound Confidential";
 
@@ -109,6 +110,11 @@
     } else if (path.startsWith('/weapons-dps')) {
       page = "weapons-dps";
 
+      window.scrollTo(0,0);
+    } else if (path.startsWith('/skill-gear')) {
+      page = "skill-gear";
+
+      window.scrollTo(0,0);
       window.scrollTo(0,0);
     } else if (path.startsWith('/xp-farming')) {
       page = "xp-farming";
@@ -610,9 +616,8 @@
     <ul class="menu">
       <li><a href="./#/vendors">Vendors</a></li> |
       <li><a href="./#/specials">Specials Items</a></li> |
+      <li><a href="./#/skill-gear">Skill Gear</a></li> |
       <li><a href="./#/character">Character Stats</a></li>
-
-      <!--<li><a href="./#/database">Database (Beta)</a></li>-->
     </ul>
     <h3>Guides</h3>
     <ul class="menu">
@@ -645,6 +650,8 @@
     <Character {data} {databaseByID}/>
   {:else if page == "weapons-dps"}
     <Weapons {data} {databaseByID}/>
+  {:else if page == "skill-gear"}
+    <SkillGear {data} {databaseByID}/>
   {:else if page == "database"}
     <Database {database}/>
   {/if}
