@@ -7,7 +7,7 @@
     window.scroll({ top: 0, left: 0, behavior: 'smooth'});
   }
 
-  import * as data from './get-release-v6.json';
+  import * as data from './release-0.10.4.json';
   let newGear = [];
   let newConsumable = [];
   let database = data.items;
@@ -61,6 +61,7 @@
   import Character from './Character.svelte';
   import Weapons from './Weapons.svelte';
   import SkillGear from './SkillGear.svelte';
+  import Buildings from './Buildings.svelte';
 
   $: title = "Unbounded - Craftbound Confidential";
 
@@ -119,10 +120,10 @@
     } else if (path.startsWith('/xp-farming')) {
       page = "xp-farming";
 
-      window.scrollTo(0,0);
-      //} else if (path.startsWith('/database')) {
-      //  page = "database";
-      //  window.scrollTo(0,0);
+      window.scrollTo(0, 0);
+    } else if (path.startsWith('/buildings')) {
+        page = "buildings";
+        window.scrollTo(0,0);
     } else {
       window.location.hash = '/combat';
     }
@@ -617,7 +618,8 @@
       <li><a href="./#/vendors">Vendors</a></li> |
       <li><a href="./#/specials">Specials Items</a></li> |
       <li><a href="./#/skill-gear">Skill Gear</a></li> |
-      <li><a href="./#/character">Character Stats</a></li>
+      <li><a href="./#/character">Character</a></li> |
+      <li><a href="./#/buildings">Buildings</a></li>
     </ul>
     <h3>Guides</h3>
     <ul class="menu">
@@ -654,6 +656,8 @@
     <SkillGear {data} {databaseByID}/>
   {:else if page == "database"}
     <Database {database}/>
+  {:else if page == "buildings"}
+    <Buildings {data} {databaseByID}/>
   {/if}
 
 
@@ -906,7 +910,7 @@
       margin: 0;
     }
 
-    .droprate {
+    .droprate, .building-level {
       color: grey;
       font-size: 0.9em;
     }
