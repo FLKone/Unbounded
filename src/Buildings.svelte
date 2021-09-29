@@ -32,7 +32,7 @@
                         <ul>
                         {#each upgrade.perks as perk}
                             <li>
-                                {perk.perkTitle}
+                                <strong>{perk.perkTitle}</strong>
                                 <br> <span class="building-level">{perk.perkDescription}</span>
                             </li>
                         {/each}
@@ -51,7 +51,7 @@
                         {/each}
                     </ul>
                     {#if upgrade.buildDuration == 0}
-                        <span class="building-level">Instant Build</span>
+                        <span class="building-level underline">Instant Build</span>
                     {:else}
                         <span class="building-level underline">Completed in {upgrade.buildDuration / 3600}h</span>
                     {/if}
