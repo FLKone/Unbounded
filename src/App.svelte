@@ -685,7 +685,7 @@
 
   <footer>
     <span>Open Source & <a target="_blank" href="https://github.com/FLKone/Unbounded">Hosted</a> on <a target="_blank" href="https://github.com">Github</a></span>&nbsp;<img src="./img/github-mark.svg" alt="Github"/>&nbsp;|&nbsp;&copy;<span>2020</span>&nbsp;<span><a
-          href="https://github.com/FLKone/Unbounded/releases">v0.3.1</a></span>
+          href="https://github.com/FLKone/Unbounded/releases">v0.4.0</a></span>
   </footer>
 </main>
 
